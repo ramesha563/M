@@ -70,7 +70,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { FaLock } from 'react-icons/fa';
-import './login.css'; // Reuse same CSS
+import './Login.css'; // Reuse same CSS
 
 const ResetPassword = () => {
   const { token } = useParams();

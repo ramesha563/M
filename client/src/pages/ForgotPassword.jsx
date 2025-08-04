@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { FaEnvelope } from 'react-icons/fa';
-import './login.css'; // ✅ Reusing login CSS for consistency
+import './Login.css'; // ✅ Reusing login CSS for consistency
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
