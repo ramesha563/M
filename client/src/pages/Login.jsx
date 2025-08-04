@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { FiEye, FiEyeOff } from "react-icons/fi"; // 
 import { FaEnvelope, FaLock,  } from 'react-icons/fa';
 import "react-toastify/dist/ReactToastify.css";
-import "./login.css";
+import "./Login.css";
 
 function Login() {
   const [email, setEmail] = useState("");
