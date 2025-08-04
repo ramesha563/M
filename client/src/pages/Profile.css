@@ -1,0 +1,191 @@
+/* === Layout === */
+.profile-dashboard {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 60px; /* space for navbar */
+  overflow: hidden;
+}
+
+/* === Sidebar === */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 60px);
+  background-color: #224978;
+  color: white;
+  padding: 20px 0;
+  border-radius: 0 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background-color: skyblue;
+  color: #0a1a2d;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+    padding: 20px 10px;
+  }
+
+  .sidebar li {
+    justify-content: center;
+    padding: 12px;
+    gap: 0;
+  }
+
+  .sidebar li span {
+    display: none;
+  }
+}
+
+/* === Main Content === */
+.main-content {
+  margin-left: 220px;
+  padding: 30px;
+  width: calc(100% - 220px);
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px 10px;
+  }
+}
+
+/* === Profile Card === */
+.profile-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 15px;
+  }
+}
+
+/* === Profile Image === */
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+}
+
+/* === Form === */
+.profile-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.profile-card input,
+.profile-card button {
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.profile-card button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-card button:hover {
+  background-color: #3d9c41;
+}
+
+/* === Logout Button === */
+.logout-btn {
+  background-color: #e53935;
+  margin-top: 20px;
+}
+
+.logout-btn:hover {
+  background-color: #c62828;
+}
+
+/* === Edit Button === */
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
